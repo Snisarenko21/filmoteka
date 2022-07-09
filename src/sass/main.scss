@@ -1,0 +1,21 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+//  Базовые стили
+@import './base/reset';
+@import './base/variables';
+@import './base/base';
+@import './base/container';
+@import './base/modal';
+@import './base/loader';
+@import './base/night-theme';
+
+// Стили для файлов
+@import './components/header';
+@import './components/gallery';
+@import './components/modal-gallery';
+@import './components/footer';
+@import './components/modal-footer';
+@import './components/modal-auth';

@@ -1,0 +1,28 @@
+<section class="gallery">
+  <button class="fas fa-arrow-circle-up" id="buttonUp">
+    <svg class="scroll-up" width="50" height="50">
+      <use href="./images/icons.svg#icon-scrollUp"></use>
+    </svg>
+  </button>
+  <div class="container">
+    <h1 hidden>Film gallery</h1>
+    <div class="gallery__home">
+      <ul class="film-list" data-array="home"></ul>
+      <div class="gallery__home--error">
+        <p class="error">No movies found...</p>
+      </div>
+    </div>
+    <div class="gallery__library--watched">
+      <ul class="film-list" data-array="watched"></ul>
+      <div class="gallery__library--watched-error">
+        <p class="error">No Watched movies added yet!</p>
+      </div>
+    </div>
+    <div class="gallery__library--queue">
+      <ul class="film-list" data-array="queue"></ul>
+      <div class="gallery__library--queue-error">
+        <p class="error">No Queue movies added yet!</p>
+      </div>
+    </div>
+  </div>
+</section>

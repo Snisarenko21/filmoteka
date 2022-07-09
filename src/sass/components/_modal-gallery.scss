@@ -1,0 +1,248 @@
+.button__nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  background-color: $clr-light;
+  opacity: 0.5;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  & > svg {
+    width: 100%;
+    height: 100%;
+    fill: inherit;
+  }
+
+  &.prev {
+    top: 40%;
+    transform: rotate(-90deg);
+  }
+
+  &.next {
+    top: 40%;
+    right: 0;
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &[disabled] {
+    opacity: 0;
+    cursor: auto;
+  }
+}
+
+.modal-gallery {
+  &__flex-thumb {
+    background-color: inherit;
+    font-weight: 500;
+    padding: 48px 20px 40px 20px;
+    width: 280px;
+    max-width: 280px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      width: 704px;
+      max-width: 704px;
+      padding: 40px 72px 40px 36px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 814px;
+      max-width: 814px;
+      padding: 40px 16px 40px 16px;
+    }
+  }
+
+  &__thumb {
+    max-width: 240px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 264px;
+      margin-right: 68px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 375px;
+      margin-right: 16px;
+    }
+
+    img {
+      border-radius: 5px;
+      width: 100%;
+      height: 357px;
+      object-fit: cover;
+
+      @media screen and (min-width: 768px) {
+        width: 264px;
+        height: 374px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 375px;
+        height: 478px;
+      }
+    }
+  }
+
+  &__thumb-text {
+    max-width: 240px;
+    @media screen and (min-width: 768px) {
+      max-width: 264px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 391px;
+    }
+  }
+
+  &__title {
+    font-weight: inherit;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &-about {
+    margin-bottom: 20px;
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      line-height: calc(20 / 12);
+      letter-spacing: -0.05px;
+    }
+  }
+
+  &-item {
+    &__name {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 39px;
+      width: 69px;
+      @media screen and (min-width: 1024px) {
+        margin-right: 83px;
+      }
+    }
+
+    &__value {
+      display: inline-block;
+      width: 129px;
+
+      @media screen and (min-width: 768px) {
+        width: 153px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 235px;
+      }
+    }
+  }
+}
+
+.modal-gallery-list {
+  margin-bottom: 20px;
+
+  &__item {
+    color: $clr-modal-param;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__vote {
+    display: inline-block;
+    width: 36px;
+    text-align: center;
+    background-color: $clr-accent-btn;
+    color: $clr-light;
+    border-radius: 5px;
+    line-height: calc(14 / 12);
+  }
+
+  &__votes {
+    display: inline-block;
+    width: 36px;
+    text-align: center;
+    line-height: calc(14 / 12);
+    color: $clr-main;
+    background-color: $clr-bg-footer;
+    border-radius: 5px;
+  }
+
+  &__popularity {
+    line-height: calc(14 / 12);
+    color: $clr-main;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $clr-main;
+  }
+
+  &__genre {
+    color: $clr-main;
+  }
+}
+
+.modal-gallery-buttons__thumb {
+  display: flex;
+  @media screen and (min-width: 1024px) {
+    margin-left: 8px;
+  }
+}
+
+.modal-gallery-button {
+  background-color: inherit;
+  border: 1px solid $clr-main;
+  border-radius: 5px;
+  color: $clr-main;
+  width: 110px;
+  height: 44px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:hover {
+    background-color: $clr-accent-btn;
+    border: none;
+    color: $clr-light;
+    transition-duration: $transition-time;
+    transition-timing-function: $cubic;
+  }
+  
+  @media screen and (min-width: 768px) {
+    width: 125px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 136px;
+  }
+
+  &.remove-btn {
+    background-color: $clr-accent-btn;
+    border: transparent;
+    color: $clr-light;
+  }
+}
